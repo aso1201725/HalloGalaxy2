@@ -9,6 +9,7 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -35,13 +36,12 @@
                     android:text="First name" />
 
                 <EditText
-                    android:id="@+id/editText1"
+                    android:id="@+id/edtFirst"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
 
                     <requestFocus />
                 </EditText>
-
             </TableRow>
 
             <TableRow
@@ -56,11 +56,10 @@
                     android:text="Family name" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/edtFamily"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10" />
-
             </TableRow>
 
             <TableRow
@@ -74,7 +73,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
             </TableRow>
-
         </TableLayout>
 
         <LinearLayout
@@ -82,7 +80,7 @@
             android:layout_height="wrap_content" >
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/btnOK"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OK" />
@@ -92,9 +90,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel" />
-
         </LinearLayout>
-
     </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="17dp" >
+
+        <TextView
+            android:id="@+id/txvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="14dp"
+            android:text="Large Text" />
+    </GridLayout>
 
 </RelativeLayout>
